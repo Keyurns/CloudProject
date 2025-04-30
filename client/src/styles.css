@@ -1,0 +1,1035 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #4dabf7;
+  --success-color: #51cf66;
+  --danger-color: #ff6b6b;
+  --text-color: #212529;
+  --bg-color: #f1f3f5;
+  --card-bg: #ffffff;
+  --border-color: #ced4da;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+}
+
+.dark-mode {
+  --primary-color: #74c0fc;
+  --success-color: #69db7c;
+  --danger-color: #ff8787;
+  --text-color: #e0e0e0;
+  --bg-color: transparent;
+  --card-bg: transparent;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+}
+
+.dark-mode .container {
+  background: transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode input::placeholder,
+.dark-mode select::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1;
+}
+
+.dark-mode input::-webkit-input-placeholder,
+.dark-mode select::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.dark-mode input::-moz-placeholder,
+.dark-mode select::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1;
+}
+
+.dark-mode input:-ms-input-placeholder,
+.dark-mode select:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.dark-mode input:-moz-placeholder,
+.dark-mode select:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1;
+}
+
+.dark-mode input,
+.dark-mode select {
+  background: rgba(30, 30, 30, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-color);
+}
+
+.dark-mode input:focus,
+.dark-mode select:focus {
+  background: #363636;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(116, 192, 252, 0.2);
+}
+
+.dark-mode .list-group-item {
+  background: rgba(30, 30, 30, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .list-group-item:hover {
+  background: #363636;
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .chart-container {
+  background: rgba(30, 30, 30, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .chart-container:hover {
+  background: #363636;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .btn-success {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.dark-mode .btn-success:hover {
+  background: #51cf66;
+}
+
+.dark-mode .delete-btn {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.dark-mode .delete-btn:hover {
+  background: #ff6b6b;
+}
+
+.dark-mode .toggle-dark {
+  background: #2d2d2d;
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.dark-mode .toggle-dark:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+.dark-mode .login-card {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: all var(--transition-speed);
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-mode .error-message {
+  background: transparent;
+  color: #ff8787;
+}
+
+.dark-mode .submit-btn {
+  background: rgba(81, 207, 102, 0.6);
+  color: white;
+}
+
+.dark-mode .submit-btn:hover {
+  background: rgba(64, 192, 87, 0.8);
+}
+
+.dark-mode .spinner {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+}
+
+.dark-mode .toggle-form {
+  color: #4dabf7;
+}
+
+.dark-mode .toggle-form:hover {
+  color: #339af0;
+}
+
+/* Ensure all text is visible in dark mode */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode span,
+.dark-mode div,
+.dark-mode label {
+  color: var(--text-color) !important;
+}
+
+/* Enhance chart visibility in dark mode */
+.dark-mode .chartjs-legend {
+  color: var(--text-color) !important;
+}
+
+.dark-mode .chartjs-tooltip {
+  background: #2d2d2d !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Ensure form elements are visible */
+.dark-mode .form-control,
+.dark-mode .form-select {
+  background: #2d2d2d !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus {
+  background: #363636 !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(116, 192, 252, 0.2) !important;
+}
+
+/* Ensure list items are visible */
+.dark-mode .list-group {
+  background: transparent !important;
+}
+
+.dark-mode .list-group-item {
+  background: rgba(30, 30, 30, 0.4);
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Ensure buttons are visible */
+.dark-mode button {
+  color: #fff !important;
+}
+
+/* Ensure loading spinner is visible */
+.dark-mode .spinner-border {
+  color: var(--primary-color) !important;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background var(--transition-speed), color var(--transition-speed);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Remove container styles */
+.container {
+    display: none;
+}
+
+/* Add new main content styles */
+.main-content {
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+    color: var(--text-color);
+    transition: all var(--transition-speed);
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    padding-top: 80px;
+}
+
+.dark-mode .main-content {
+    background: transparent;
+}
+
+/* Adjust chart section for full width */
+.chart-section {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+    width: 100%;
+    min-height: 80vh;
+}
+
+/* Adjust form and list styles */
+.form-section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.list-section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .form-section,
+.dark-mode .list-section {
+    background: rgba(30, 30, 30, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Adjust responsive styles */
+@media (min-width: 768px) {
+    .chart-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 0 40px;
+    }
+    
+    .form-section,
+    .list-section {
+        margin: 20px 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .chart-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        padding: 0 60px;
+    }
+    
+    .form-section,
+    .list-section {
+        margin: 20px 60px;
+    }
+}
+
+input, select {
+    padding: 12px 15px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    font-size: 14px;
+    transition: all var(--transition-speed);
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.2);
+    outline: none;
+    transform: scale(1.02);
+}
+
+.btn-success {
+    background: rgba(81, 207, 102, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-success:hover {
+    background: #40c057;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(81, 207, 102, 0.3);
+}
+
+.delete-btn {
+    background: rgba(255, 107, 107, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all var(--transition-speed);
+}
+
+.delete-btn:hover {
+    background: #fa5252;
+    transform: scale(1.1);
+}
+
+.list-group-item {
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    transition: all var(--transition-speed);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.list-group-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.chart-container {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all var(--transition-speed);
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.chart-container h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    text-align: center;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+}
+
+.chart-container canvas {
+    max-height: 500px;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* Add responsive adjustments for charts */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+    
+    .chart-container {
+        height: 450px;
+    }
+    
+    .chart-container canvas {
+        max-height: 380px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        margin: 5px auto;
+    }
+    
+    .chart-container {
+        height: 400px;
+        padding: 20px;
+    }
+    
+    .chart-container canvas {
+        max-height: 320px;
+    }
+    
+    .chart-container h4 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Ensure chart legends are properly positioned */
+.chart-container .chartjs-legend {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Add smooth transitions for chart updates */
+.chart-container canvas {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.chart-container canvas:hover {
+    opacity: 0.9;
+}
+
+/* Add full-width styles for larger screens */
+@media (min-width: 1400px) {
+    .container {
+        width: 99%;
+        padding: 30px;
+    }
+    
+    .chart-section {
+        padding: 0 50px;
+        gap: 70px;
+    }
+    
+    .chart-container {
+        height: 700px;
+    }
+    
+    .chart-container canvas {
+        max-height: 600px;
+    }
+    
+    .chart-container h4 {
+        font-size: 28px;
+    }
+}
+
+/* Add styles for ultra-wide screens */
+@media (min-width: 2000px) {
+    .container {
+        width: 99.5%;
+        padding: 40px;
+    }
+    
+    .chart-section {
+        padding: 0 60px;
+        gap: 80px;
+    }
+    
+    .chart-container {
+        height: 800px;
+    }
+    
+    .chart-container canvas {
+        max-height: 700px;
+    }
+    
+    .chart-container h4 {
+        font-size: 32px;
+    }
+}
+
+/* Dark Mode Toggle Button */
+.toggle-dark {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+    transform: translateZ(0);
+    will-change: transform;
+    margin: 0;
+}
+
+.toggle-dark:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Logout Button */
+.logout-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px;
+    background: rgba(255, 107, 107, 0.8);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+    transform: translateZ(0);
+    will-change: transform;
+    margin: 0;
+}
+
+.logout-btn:hover {
+    background: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* Remove floating animation */
+@keyframes buttonFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
+}
+
+/* Add smooth transitions for all interactive elements */
+* {
+    transition: background-color var(--transition-speed),
+                color var(--transition-speed),
+                transform var(--transition-speed),
+                box-shadow var(--transition-speed);
+}
+
+/* Add loading animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* Add hover effects for buttons */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+button:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Login Component Styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  margin: 0;
+  z-index: 0;
+}
+
+.login-card {
+  background: #9b545480;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  transition: all var(--transition-speed);
+  position: relative;
+  z-index: 1;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+.login-card h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--text-color);
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 28px;
+}
+
+.registration-fields {
+  max-height: calc(90vh - 100px);
+  overflow-y: auto;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.registration-fields::-webkit-scrollbar {
+  width: 6px;
+}
+
+.registration-fields::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.registration-fields::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.registration-fields::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode .registration-fields::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .registration-fields::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--text-color);
+  transition: all var(--transition-speed);
+  font-size: 16px;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #1a3d5c;
+  box-shadow: 0 0 0 2px rgba(26, 61, 92, 0.2);
+  outline: none;
+  transform: scale(1.02);
+  position: relative;
+  z-index: 2;
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group select:focus {
+  border-color: #4dabf7;
+  box-shadow: 0 0 0 2px rgba(77, 171, 247, 0.2);
+}
+
+.error-message {
+  background: transparent;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dark-mode .error-message {
+  background: transparent;
+  color: #ff8787;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: rgba(81, 207, 102, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background: rgba(64, 192, 87, 0.8);
+  transform: translateY(-2px);
+}
+
+.toggle-form {
+  text-align: center;
+  margin-top: 10px;
+  color: #1a3d5c;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0);
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  font-size: 16px;
+}
+
+.toggle-form:hover {
+  color: #144974;
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Add responsive styles */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 10px 12px;
+  }
+}
+
+/* Add styles for the expense list to make it more compact */
+.list-group {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 30px;
+}
+
+.list-group-item {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+}
+
+/* Adjust the form section to be more compact */
+.mb-3 {
+    margin-bottom: 15px !important;
+}
+
+/* Make the total spending more prominent */
+h3.mt-4 {
+    font-size: 24px;
+    margin: 30px 0;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Video Background Styles */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.dark-mode .video-overlay {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure text is visible over video background */
+h1, h2, h3, h4, h5, h6, p, span, div, label {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode h5, 
+.dark-mode h6, 
+.dark-mode p, 
+.dark-mode span, 
+.dark-mode div, 
+.dark-mode label {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* Ensure main content is above video */
+.main-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Adjust form and list sections for better visibility */
+.form-section,
+.list-section {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .form-section,
+.dark-mode .list-section {
+    background: rgba(30, 30, 30, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Ensure chart containers are visible with transparency */
+.chart-container {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .chart-container {
+    background: rgba(30, 30, 30, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Adjust input and select fields for better visibility with transparency */
+input, select {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--text-color);
+}
+
+.dark-mode input,
+.dark-mode select {
+    background: rgba(30, 30, 30, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-color);
+}
+
+/* Adjust list items for better visibility with transparency */
+.list-group-item {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .list-group-item {
+    background: rgba(30, 30, 30, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+} 
